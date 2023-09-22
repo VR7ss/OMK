@@ -96,7 +96,7 @@ GetKeyButton.Parent = frame
 --------------------------------------------------------------------------
 SubmitButton.MouseButton1Click:Connect(function()
     local KeySystem = KeySystem.Text
-    if KeySystem == "VR7 SA" then   
+    if KeySystem == "VR8 ON TOP" then   
 screenGui:Destroy()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/main/VR7%20SAAD"))()
