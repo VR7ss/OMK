@@ -96,7 +96,7 @@ GetKeyButton.Parent = frame
 --------------------------------------------------------------------------
 SubmitButton.MouseButton1Click:Connect(function()
     local KeySystem = KeySystem.Text
-    if KeySystem == "لاتسوي خوي" then   
+    if KeySystem == "VR7 احبك" then   
 screenGui:Destroy()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/main/VR7%20SAAD"))()
@@ -105,5 +105,5 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/main/VR7%20
 end)
 
 GetKeyButton.MouseButton1Click:Connect(function()
- setclipboard("ماتاخذ المفتاح") 
+ setclipboard("VR7 احبك") 
 end) 
