@@ -14,7 +14,7 @@ local profileUrl = "https://www.roblox.com/users/" .. game:GetService("Players")
 local playerCount = #game:GetService("Players"):GetPlayers()
 -- ط¨ط±ظٹظ…ظٹظ…
 local Players = game:GetService("Players")
-loca
+local player = Players.LocalPlayer
 local hasPremium = player.MembershipType == Enum.MembershipType.Premium
 
 -- Create a JSON object to send to the webhook
