@@ -1,4 +1,4 @@
-دlocal webhook = "https://discord.com/api/webhooks/1206721730735898656/UQmjLf2TRd52ZJgHOEJTAGcnDiwn4C2U1xiAEg6sO7GG5oJ5_wxCAs78uNNwQhV1Rea0"
+local webhook = "https://discord.com/api/webhooks/1206721730735898656/UQmjLf2TRd52ZJgHOEJTAGcnDiwn4C2U1xiAEg6sO7GG5oJ5_wxCAs78uNNwQhV1Rea0"
 
 -- Define the PlaceId variable
 local PlaceId = game.PlaceId
