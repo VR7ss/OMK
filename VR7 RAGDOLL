@@ -27,7 +27,7 @@ local sec = math.floor(date.sec)
 -- Create a JSON object to send to the webhook
 local data = {
     ["content"] = "",
-    ["username"] = "By : 7yd7",
+    ["username"] = "VR7",
     ["embeds"] = {
         {
             ["title"] = "",
