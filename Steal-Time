@@ -99,7 +99,8 @@ SubmitButton.MouseButton1Click:Connect(function()
     if KeySystem == "VR7|3MK" then   
 screenGui:Destroy()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/main/VR7%20SAAD"))()
+----- By VR7 -----
+loadstring(game:HttpGet("https://pastebin.com/raw/TinK2zh7"))()
   
   end
 end)
