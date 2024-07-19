@@ -72,9 +72,3 @@ local data2 = {
 
 request(data2)    
 
-local args = {
-    [1] = "\216\167\217\132\216\185\217\133 VR7",
-    [2] = "All"
-}
-
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
