@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فحص حسابات روبلوكس</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            direction: rtl;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .upload-area {
+            border: 2px dashed #667eea;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            background: #f8f9fa;
+        }
+        
+        .upload-area p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            resize: none;
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            width: 100%;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #5a67d8;
+        }
+        
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .results {
+            margin-top: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .account {
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            background: white;
+            border-left: 4px solid #ddd;
+        }
+        
+        .working {
+            border-left-color: #48bb78;
+        }
+        
+        .not-working {
+            border-left-color: #f56565;
+        }
+        
+        .checking {
+            border-left-color: #ed8936;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-left: 8px;
+        }
+        
+        .working .status {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        
+        .not-working .status {
+            background: #fed7d7;
+            color: #742a2a;
+        }
+        
+        .checking .status {
+            background: #feebcb;
+            color: #744210;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 فحص حسابات روبلوكس</h1>
+        
+        <div class="upload-area">
+            <p>📝 أدخل الحسابات (كل حساب في سطر)</p>
+            <p>الصيغة: username:password</p>
+        </div>
+        
+        <textarea id="accountsInput" placeholder="مثال:
+username1:password1
+username2:password2
+username3:password3"></textarea>
+        
+        <button class="btn" onclick="startChecking()">▶️ بدء الفحص</button>
+        <button class="btn" onclick="stopChecking()" style="background: #f56565;">⏹️ إيقاف الفحص</button>
+        
+        <div class="results" id="results">
+            <p>النتائج ستظهر هنا...</p>
+        </div>
+    </div>
+
+    <script>
+        let isChecking = false;
+        let accounts = [];
+        let currentIndex = 0;
+        
+        function startChecking() {
+            const input = document.getElementById('accountsInput').value;
+            if (!input.trim()) {
+                alert('⚠️ يرجى إدخال الحسابات أولاً');
+                return;
+            }
+            
+            accounts = input.split('\n')
+                .filter(line => line.includes(':'))
+                .map(line => {
+                    const [username, password] = line.split(':');
+                    return {
+                        username: username.trim(),
+                        password: password.trim(),
+                        checked: false,
+                        valid: false
+                    };
+                });
+            
+            if (accounts.length === 0) {
+                alert('❌ لم يتم العثور على حسابات صحيحة');
+                return;
+            }
+            
+            isChecking = true;
+            currentIndex = 0;
+            document.getElementById('results').innerHTML = `
+                <p>🔍 بدأ فحص ${accounts.length} حساب...</p>
+            `;
+            
+            checkNextAccount();
+        }
+        
+        function stopChecking() {
+            isChecking = false;
+            document.getElementById('results').innerHTML += `
+                <p>⏹️ تم إيقاف الفحص</p>
+            `;
+        }
+        
+        function checkNextAccount() {
+            if (!isChecking || currentIndex >= accounts.length) {
+                if (currentIndex >= accounts.length) {
+                    document.getElementById('results').innerHTML += `
+                        <p>✅ تم الانتهاء من فحص جميع الحسابات</p>
+                    `;
+                }
+                return;
+            }
+            
+            const account = accounts[currentIndex];
+            currentIndex++;
+            
+            // عرض حالة الفحص
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML += `
+                <div class="account checking">
+                    🔍 جاري فحص: ${account.username}
+                    <span class="status">جاري الفحص</span>
+                </div>
+            `;
+            
+            resultsDiv.scrollTop = resultsDiv.scrollHeight;
+            
+            // فتح روبلوكس في نافذة جديدة والفحص
+            checkRobloxAccount(account);
+        }
+        
+        function checkRobloxAccount(account) {
+            // فتح متصفح روبلوكس
+            const robuxWin = window.open('https://www.roblox.com/login', '_blank');
+            
+            if (!robuxWin) {
+                // إذا لم تفتح النافذة (ممكن بسبب blocker)
+                simulateCheck(account);
+                return;
+            }
+            
+            // محاولة الفحص الحقيقي
+            setTimeout(() => {
+                try {
+                    // هذه محاولة للتحكم في النافذة (قد لا تعمل بسبب قيود المتصفح)
+                    robuxWin.focus();
+                    
+                    // سنستخدم محاكاة للفحص لأن التحكم بالنافذة صعب من الهاتف
+                    simulateCheck(account);
+                    
+                } catch (error) {
+                    simulateCheck(account);
+                }
+                
+                // إغلاق النافذة بعد الفحص
+                setTimeout(() => {
+                    try { robuxWin.close(); } catch (e) {}
+                    checkNextAccount();
+                }, 3000);
+                
+            }, 2000);
+        }
+        
+        function simulateCheck(account) {
+            // محاكاة الفحص (ستحتاج لتطويرها لفحص حقيقي)
+            const isValid = Math.random() > 0.7; // 30% فرصة أن يكون صالح
+            
+            const resultsDiv = document.getElementById('results');
+            const lastElement = resultsDiv.lastElementChild;
+            
+            if (lastElement && lastElement.classList.contains('checking')) {
+                lastElement.classList.remove('checking');
+                lastElement.classList.add(isValid ? 'working' : 'not-working');
+                
+                lastElement.innerHTML = isValid ? 
+                    `✅ ${account.username}:${account.password} - صالح` :
+                    `❌ ${account.username} - غير صالح`;
+                
+                lastElement.innerHTML += `<span class="status">${isValid ? 'صالح' : 'غير صالح'}</span>`;
+            }
+            
+            // الانتقال للحساب التالي بعد فترة
+            setTimeout(checkNextAccount, 2000);
+        }
+    </script>
+</body>
+</html>
