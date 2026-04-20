@@ -1,0 +1,200 @@
+-- VR7 ON TOP - ULTIMATE CONTROL PANEL (V8 - VOID PAUSE & INSTANT BRING)
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local LocalPlayer = Players.LocalPlayer
+
+-- إنشاء الواجهة (GUI)
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "VR7_Ultimate_Panel"
+ScreenGui.Parent = game:GetService("CoreGui")
+
+local MainFrame = Instance.new("Frame")
+MainFrame.Size = UDim2.new(0, 260, 0, 480)
+MainFrame.Position = UDim2.new(0.5, -130, 0.5, -240)
+MainFrame.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+MainFrame.BorderSizePixel = 0
+MainFrame.Active = true
+MainFrame.Draggable = true
+MainFrame.Parent = ScreenGui
+
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(0, 12)
+UICorner.Parent = MainFrame
+
+-- العنوان العلوي
+local Title = Instance.new("TextLabel")
+Title.Size = UDim2.new(1, 0, 0, 45)
+Title.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Title.Text = "VR7 ON TOP"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextSize = 22
+Title.Font = Enum.Font.GothamBold
+Title.Parent = MainFrame
+local TitleCorner = Instance.new("UICorner")
+TitleCorner.Parent = Title
+
+-- وظيفة إنشاء الأزرار
+local function createButton(text, pos, color)
+    local btn = Instance.new("TextButton")
+    btn.Size = UDim2.new(0.9, 0, 0, 35)
+    btn.Position = pos
+    btn.BackgroundColor3 = color
+    btn.Text = text
+    btn.TextColor3 = Color3.new(1, 1, 1)
+    btn.Font = Enum.Font.GothamSemibold
+    btn.TextSize = 13
+    btn.AutoButtonColor = false
+    btn.Parent = MainFrame
+    
+    local btnCorner = Instance.new("UICorner")
+    btnCorner.CornerRadius = UDim.new(0, 6)
+    btnCorner.Parent = btn
+    
+    return btn
+end
+
+-- الأزرار
+local VoidPauseBtn = createButton("سحب وتقييد (Void Pause)", UDim2.new(0.05, 0, 0.12, 0), Color3.fromRGB(150, 0, 0))
+local LagBtn = createButton("تعليق السيرفر (LAG)", UDim2.new(0.05, 0, 0.21, 0), Color3.fromRGB(100, 0, 200))
+local CuffBtn = createButton("تقييد الجميع (Fast)", UDim2.new(0.05, 0, 0.30, 0), Color3.fromRGB(180, 40, 40))
+local SkinBtn = createButton("سبام سكنات عشوائية", UDim2.new(0.05, 0, 0.39, 0), Color3.fromRGB(40, 140, 40))
+local SizeBtn = createButton("سبام حجم (1.1 - 2.0)", UDim2.new(0.05, 0, 0.48, 0), Color3.fromRGB(40, 90, 180))
+local TitleBtn = createButton("سبام أسامي ملونة", UDim2.new(0.05, 0, 0.57, 0), Color3.fromRGB(130, 40, 180))
+local CloseBtn = createButton("إغلاق الواجهة", UDim2.new(0.05, 0, 0.88, 0), Color3.fromRGB(60, 60, 60))
+
+-- متغيرات التحكم
+local voidActive = false
+local isLagging = false
+local spamSkins = false
+local spamSize = false
+local spamTitles = false
+
+-- 1. ميزة السحب والتقييد (Void Pause)
+VoidPauseBtn.MouseButton1Click:Connect(function()
+    voidActive = not voidActive
+    VoidPauseBtn.Text = voidActive and "إيقاف الـ Void" or "سحب وتقييد (Void Pause)"
+    VoidPauseBtn.BackgroundColor3 = voidActive and Color3.fromRGB(75, 0, 0) or Color3.fromRGB(150, 0, 0)
+    
+    task.spawn(function()
+        while voidActive do
+            local char = LocalPlayer.Character
+            local root = char and char:FindFirstChild("HumanoidRootPart")
+            local remote = char and char:FindFirstChild("freecuff", true) and char:FindFirstChild("freecuff", true):FindFirstChild("RemoteEvent")
+            
+            if root and remote then
+                -- الانتقال لمكان يسبب تعليق اللعبة (Void Zone)
+                root.CFrame = CFrame.new(0, -1000000, 0) -- مكان بعيد جداً تحت الماب
+                
+                for _, target in ipairs(Players:GetPlayers()) do
+                    if not voidActive then break end
+                    if target ~= LocalPlayer and target.Character and target.Character:FindFirstChild("HumanoidRootPart") then
+                        -- سحب فوري لجميع اللاعبين إليك في الـ Void
+                        task.spawn(function()
+                            ReplicatedStorage.FreeCommandsRemotes.Action:FireServer("Bring", target.Name)
+                            -- تقييد مكثف لضمان بقائهم عالقين معك في الـ Void
+                            for i = 1, 10 do
+                                remote:FireServer("Cuff", target.Character.HumanoidRootPart)
+                            end
+                        end)
+                    end
+                end
+            end
+            task.wait(0.1) -- تكرار سريع جداً لضمان عدم إفلاتهم
+        end
+    end)
+end)
+
+-- 2. ميزة تعليق السيرفر (LAG)
+LagBtn.MouseButton1Click:Connect(function()
+    isLagging = not isLagging
+    LagBtn.Text = isLagging and "إيقاف التعليق" or "تعليق السيرفر (LAG)"
+    LagBtn.BackgroundColor3 = isLagging and Color3.fromRGB(50, 0, 100) or Color3.fromRGB(100, 0, 200)
+    
+    task.spawn(function()
+        while isLagging do
+            for i = 1, 200 do
+                task.spawn(function()
+                    ReplicatedStorage.FreeCommandsRemotes.Action:FireServer("SetSize", 1)
+                    ReplicatedStorage.ChangeSkinEvent:FireServer(7222676854)
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+
+-- 3. تقييد الجميع (Fast)
+CuffBtn.MouseButton1Click:Connect(function()
+    local remote = LocalPlayer.Character:FindFirstChild("freecuff", true) and LocalPlayer.Character:FindFirstChild("freecuff", true):FindFirstChild("RemoteEvent")
+    if remote then
+        for _, target in ipairs(Players:GetPlayers()) do
+            if target ~= LocalPlayer and target.Character and target.Character:FindFirstChild("HumanoidRootPart") then
+                task.spawn(function()
+                    for i = 1, 10 do
+                        remote:FireServer("Cuff", target.Character.HumanoidRootPart)
+                        task.wait()
+                    end
+                end)
+            end
+        end
+    end
+end)
+
+-- 4. سبام سكنات عشوائية
+local skinIDs = {7222676854, 11261159344, 11261160421, 11261161256, 11261162134}
+SkinBtn.MouseButton1Click:Connect(function()
+    spamSkins = not spamSkins
+    SkinBtn.Text = spamSkins and "إيقاف سبام السكنات" or "سبام سكنات عشوائية"
+    task.spawn(function()
+        while spamSkins do
+            ReplicatedStorage.ChangeSkinEvent:FireServer(skinIDs[math.random(1, #skinIDs)])
+            task.wait(0.1)
+        end
+    end)
+end)
+
+-- 5. سبام حجم (1.1 - 2.0)
+SizeBtn.MouseButton1Click:Connect(function()
+    spamSize = not spamSize
+    SizeBtn.Text = spamSize and "إيقاف سبام الحجم" or "سبام حجم (1.1 - 2.0)"
+    task.spawn(function()
+        local currentSize = 1.1
+        while spamSize do
+            ReplicatedStorage.FreeCommandsRemotes.Action:FireServer("SetSize", currentSize)
+            currentSize = currentSize + 0.1
+            if currentSize > 2.0 then currentSize = 1.1 end
+            task.wait(0.1)
+        end
+    end)
+end)
+
+-- 6. سبام أسامي ملونة
+local customTitles = {"أنا عمك", "ابلع ياهطف", "VR7 ON TOP", "STAY DOWN"}
+TitleBtn.MouseButton1Click:Connect(function()
+    spamTitles = not spamTitles
+    TitleBtn.Text = spamTitles and "إيقاف سبام الأسامي" or "سبام أسامي ملونة"
+    task.spawn(function()
+        while spamTitles do
+            local randomTitle = customTitles[math.random(1, #customTitles)]
+            local randomColor = Color3.fromHSV(tick() % 5 / 5, 1, 1)
+            ReplicatedStorage.FreeCommandsRemotes.Action:FireServer("SetTitle", randomTitle, randomColor)
+            task.wait(0.1)
+        end
+    end)
+end)
+
+-- إغلاق
+CloseBtn.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+
+-- تأثير قوس قزح للعنوان
+task.spawn(function()
+    while true do
+        for i = 0, 1, 0.01 do
+            Title.TextColor3 = Color3.fromHSV(i, 0.8, 1)
+            task.wait(0.05)
+        end
+    end
+end)
